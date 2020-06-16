@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Project/07_Extract_BusStop_Refine_MissingDataAndDataDiet/mad/missing_and_diet_by17_AM.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Project/07_Extract_BusStop_Refine_MissingDataAndDataDiet/mad/missing_and_diet_by17_PM.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Project/08_Less_BusStop_Data_NewCalcu/mad/missing_and_diet_by17_AM.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Project/08_Less_BusStop_Data_NewCalcu/mad/missing_and_diet_by17_PM.csv" charset="x-windows-949" />
+  </component>
+</project>

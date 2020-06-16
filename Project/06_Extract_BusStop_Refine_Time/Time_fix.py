@@ -2,18 +2,16 @@
 
 import pandas as pd
 import csv
-from pandas import DataFrame as df
-import os
 
-arr_bus = ['17','40','68', '81', '138-1']
+arr_bus = ['17','40','68','81', '138-1']
 arr_time = ['AM','PM']
 header = ['BusStop_No','Bus_No','Predict_Arrive','Date','hour','min','sec']
 
 for num in arr_bus:
-    for time in arr_time:
-        input_file = 'csv/Extract_Refine_by' + num + '_' + time + '.csv'
-        output_file = "fix/time_fix_by" + num +'_' + time + '.csv'
-        fix_arr = pd.DataFrame(header)
+    for time_set in arr_time:
+        input_file = 'csv/Extract_Refine_by' + num + '_' + time_set + '.csv'
+        output_file = "fix/time_fix_by" + num +'_' + time_set + '.csv'
+        fix_arr = pd.DataFrame([header])
         fix_arr.to_csv(output_file, index=False, encoding='utf-8')
         print("{} 파일이 생성되었습니다.".format(output_file))
 
@@ -24,11 +22,11 @@ for num in arr_bus:
             BS_no = (data_frame.loc[[i], ['BusStop_No']].values[0])[0]
             B_no = (data_frame.loc[[i], ['Bus_No']].values[0])[0]
             pred = (data_frame.loc[[i], ['Predict_Arrive']].values[0])[0]
-            time = (data_frame.loc[[i],['Current_Time']].values[0])[0].split()
-            date = time[0]
-            hour = (time[1].split(":"))[0]
-            min = (time[1].split(":"))[1]
-            sec = (time[1].split(":"))[2]
+            timeing = (data_frame.loc[[i],['Current_Time']].values[0])[0].split()
+            date = timeing[0]
+            hour = (timeing[1].split(":"))[0]
+            min = (timeing[1].split(":"))[1]
+            sec = (timeing[1].split(":"))[2]
 
 
             # csv파일에 넣기 위해 배열을 만듦.
