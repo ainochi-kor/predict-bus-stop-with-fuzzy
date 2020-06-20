@@ -27,13 +27,13 @@ for bus_num in arr_bus:
                 bus_info_Stop = bus_info_df.iloc[row][0]
                 #print(bus_info_df.iloc[row][0])
                 if busStop == bus_info_Stop:
-                    #print(bus_info_df.iloc[row])
+                    print(bus_info_df.iloc[row])
                     # csv파일에 얻은 정보를 추가.
                     column_index = []
                     with open(output_file, 'a') as csv_out_file:
                         filewriter = csv.writer(csv_out_file)
                         row_index = []
                         filewriter.writerow(bus_info_df.iloc[row])
-            print("다음")
+            print(bus_info_Stop  + ", 다음")
 
 
